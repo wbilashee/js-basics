@@ -1,0 +1,27 @@
+// String
+const intro = "It's me Julie";
+const age = `I am ${2022 - 2005} years old`;
+const number = "27";
+intro[11];
+intro.length;
+intro.slice(11, 16);
+intro.substring(5, 10);
+intro.indexOf("e");
+intro.lastIndexOf("e");
+intro.concat(`. ${age}.`);
+intro.includes("me");
+intro.startsWith("It");
+intro.endsWith("lie");
+intro.trim();
+intro.trimStart();
+intro.trimEnd();
+intro.charAt(8);
+intro.charCodeAt(8);
+intro.split(" ");
+intro.toUpperCase();
+intro.toLowerCase();
+number.padStart(6, 0);
+number.padEnd(6, 0);
+age.match(/years/ig);
+age.search(/old/ig);
+age.replace(/I am/ig, "She is");
