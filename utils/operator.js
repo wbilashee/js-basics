@@ -21,3 +21,7 @@ Boolean(a == b);
 Boolean(a === b);
 Boolean(a != b);
 Boolean(a !== b);
+
+// Nullish Coalescing Operator
+let foo = "Martin" ?? null;
+let bar = undefined ?? "Okay";
