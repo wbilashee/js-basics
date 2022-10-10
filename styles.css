@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap");
+:root {
+  --color: #c41e2f;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-size: 2rem;
+  background-color: #f9f9f9;
+  font-family: "Quicksand", sans-serif;
+}
+.text-center {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  display: flex;
+  color: white;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  align-items: center;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: var(--color);
+}
+h1 {
+  color: var(--color);
+  margin: 2.5rem auto;
+}
+#clock {
+  width: 40%;
+  height: 15rem;
+  display: flex;
+  color: white;
+  margin: 0 auto;
+  font-size: 5rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  justify-content: center;
+  background: var(--color);
+}
+#user-div {
+  width: 40%;
+  border-radius: 0.5rem;
+  margin: 4rem auto 2rem;
+  border: 0.5rem solid var(--color);
+}
+#user-div img {
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+}
+#user-img {
+  padding: 3rem;
+  background: var(--color);
+}
+#user-info {
+  margin: 2rem;
+  margin-left: 4rem;
+}
+#user-info * {
+  margin-bottom: 1rem;
+}
+#img-div {
+  width: 50%;
+  height: 45rem;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1rem solid var(--color);
+}
+#next-img {
+  width: 100%;
+  height: 100%;
+}
+#gallery-container {
+  width: 70%;
+  border-radius: 0.5rem;
+  margin: 0 auto 10rem;
+  border: 0.5rem solid var(--color);
+}
+#gallery-container > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#gallery-container > form > input {
+  height: 5rem;
+  border: none;
+  outline: none;
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+}
+#gallery-container > form > input:focus {
+  outline: none;
+}
+#search-input {
+  flex: 1;
+}
+#search-btn {
+  flex: 0.2;
+  color: white;
+  cursor: pointer;
+  background-color: var(--color);
+}
+#spinner {
+  display: block;
+  margin: 5rem auto;
+}
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#gallery img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+#gallery img:hover {
+  opacity: 0.6;
+}
