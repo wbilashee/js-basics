@@ -9,6 +9,35 @@
     <title>JavaScript</title>
   </head>
   <body>
+    <main>
+      <h1 class="text-center">JavaScript</h1>
+      <section id="clock">
+        <h2 id="date"></h2>
+      </section>
+      <section>
+        <div id="user-div"></div>
+        <button id="new-btn">New</button>
+      </section>
+      <section>
+        <div id="img-div">
+          <img id="next-img" src="assets/roses.jpg" alt="Random Image" />
+        </div>
+        <button id="nextBtn">Next</button>
+      </section>
+      <section id="gallery-container">
+        <form id="search-form">
+          <input
+            type="search"
+            name="search"
+            id="search-input"
+            placeholder="Search for images..."
+          />
+          <input type="submit" id="search-btn" value="Search" />
+        </form>
+        <img id="spinner" src="./assets/spinner.gif" alt="spinner" />
+        <div id="gallery"></div>
+      </section>
+    </main>
     <script src="./app.js"></script>
   </body>
 </html>
