@@ -280,9 +280,11 @@ booWho(null);
 
 // Title Case A Sentence
 function titleCase(str) {
-    let arr = str.split(" ");
-    let title = arr.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()));
-    return title.join(" ");
+    return str
+        .toLowerCase()
+        .split(" ")
+        .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+        .join(" ");
 }
 titleCase("I'm a little tea pot");
 
@@ -618,21 +620,14 @@ truthCheck([{ "user": "Tinky-Winky", "sex": "male" }, { "user": "Dipsy", "sex": 
 
 // Arguments Optional
 function addTogether() {
-    const [first, second] = Object.values(arguments);
-    // Check first argument
-    if (typeof first !== "number") {
+    const [first, second] = arguments;
+    if (typeof (first) !== "number")
         return undefined;
-    }
-
-    // Function to add second argument
-    const addSecond = (second) => typeof second === "number" ? first + second : undefined;
-
-    // Check second argument
-    if (second !== undefined) {
-        return addSecond(second);
-    } else {
-        return addSecond;
-    }
+    if (arguments.length === 1)
+        return (second) => addTogether(first, second);
+    if (typeof (second) !== "number")
+        return undefined;
+    return first + second;
 }
 addTogether(5)(7);
 
@@ -750,7 +745,7 @@ function checkCashRegister(price, cash, cid) {
     let database = { "ONE HUNDRED": 100, "TWENTY": 20, "TEN": 10, "FIVE": 5, "ONE": 1, "QUARTER": 0.25, "DIME": 0.1, "NICKEL": 0.05, "PENNY": 0.01 };
     let result = [];
     let remain = 0;
-    
+
     // First logical block for recursion
     let func = function (money, base, balance) {
         let num = Math.floor(money / database[base]);
